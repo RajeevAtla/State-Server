@@ -1,4 +1,5 @@
-# State Server!
+# Given Challenge
+## State Server!
 
 Vistar serves up a mound of geospatial data both internally and to third
 parties. What we need is a server to tell us which state, if any, a point is in.
@@ -12,7 +13,7 @@ We would prefer a server that accepts GET requests like the one listed in the
 expected behavior, but we will also accept a solution that accepts the
 latitude/longitude via command line params.
 
-## Expected Behavior
+### Expected Behavior
 
   If going the server route:
 
@@ -29,7 +30,7 @@ latitude/longitude via command line params.
   Pennsylvania
   $
 
-## Notes
+### Notes
 
 Given that file, it took one of us about an hour to implement something that
 worked correctly. You're welcome to take it however far you want, but we're
@@ -40,3 +41,8 @@ know. A Makefile never hurt anyone.
 
 We would prefer that your solution not require a specific IDE to run, and that
 it can be built and run on the command line.
+
+# Implementation Notes
+
+- We will use Bun and TypeScript
+- Jest for testing
