@@ -46,3 +46,8 @@ it can be built and run on the command line.
 
 - We will use Bun and TypeScript
 - Jest for testing
+
+## JSON Notes
+- `states.json` isn't really a valid JSON file, so I fixed it up
+  - Every entry is wrapped up in a states object
+  - All the entries are put in an array
