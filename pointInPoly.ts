@@ -23,3 +23,5 @@ function isPointInPoly(pt: Array<number>, poly: Array<Array<number>>): boolean {
 
     return odd;
 }
+
+module.exports = {isPointInPoly};
