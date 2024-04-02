@@ -13,7 +13,7 @@ export interface StateBorders { // suppose there are n states
 };
 
 /**
- * Takes the json file
+ * Takes the states.json file
  * Converts the entries into an array of StateBorders objects
  * @returns {Array<StateBorders>} - data thats been put into an array containing info about state borders
  */
@@ -62,11 +62,11 @@ export function isPointInPoly(pt: Array<number>, poly: Array<Array<number>>): bo
  * @returns {string} - state in which point is located
  */
 export function whichState(pt: Array<number>, statesBordersData: Array<StateBorders>): string {
-    statesBordersData.forEach((state) => { // loop through data
-        if(isPointInPoly(pt, state.border)) {
-            return state.state;
-        }
-    })
-    // point isn't in any of the states
-    return "no state found";
+    try { // use find expression to search state data
+        let ans: string = statesBordersData.find((state) => isPointInPoly(pt, state.border)).state;
+        return ans;
+    }
+    finally { // point isnt in any state
+        return "no state found";
+    }
 }
