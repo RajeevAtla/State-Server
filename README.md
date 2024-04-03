@@ -47,7 +47,7 @@ it can be built and run on the command line.
 ## Tech Notes
 
 - We will use Bun and TypeScript
-- Bun's testing module for testing
+- Bun's testing module for testing, with Supertest for server testing
 
 ## Implementation Notes
 - `states.json` isn't really a valid JSON file, so I fixed it up
@@ -64,4 +64,27 @@ it can be built and run on the command line.
   - Instead of a GET request (which isn't supposed to include data), we use a POST request
 - Tests
   - Use the Bun testing module for more speed
+  - Need to check edge cases
   - 100% test coverage
+  - Supertest for server testing
+
+## Usage
+### Dependencies
+- The main dependency is [Bun](https://bun.sh).
+```bash
+npm install -g bun
+```
+
+### Server
+```bash
+bun run server.js &
+curl -d "longitude=-77.036133&latitude=40.51379" http://localhost:3000/
+# Pennsylvania
+```
+
+### Testing
+```bash
+bun test
+bun test --coverage
+# See test coverage
+```
