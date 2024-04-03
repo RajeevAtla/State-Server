@@ -42,12 +42,22 @@ know. A Makefile never hurt anyone.
 We would prefer that your solution not require a specific IDE to run, and that
 it can be built and run on the command line.
 
-# Implementation Notes
+# Tech Notes
 
 - We will use Bun and TypeScript
 - Jest for testing
 
-## JSON Notes
+## Implementation Notes
 - `states.json` isn't really a valid JSON file, so I fixed it up
   - Every entry is wrapped up in a states object
   - All the entries are put in an array
+- Checking points in states
+  - Basically checking if a point is in a polygon
+  - Can assume polygon is convex, since its a state (borders would be weird otherwise)
+  - Can use even-odd-rule algorithm to find the result
+  - In production, would use something like https://github.com/Turfjs/turf
+  - No point can be in 2 states at once
+- Server
+  - Use the http module
+  - Instead of a GET request (which isn't supposed to include data), we use a POST request
+  - 
