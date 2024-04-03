@@ -62,11 +62,16 @@ export function isPointInPoly(pt: Array<number>, poly: Array<Array<number>>): bo
  * @returns {string} - state in which point is located
  */
 export function whichState(pt: Array<number>, statesBordersData: Array<StateBorders>): string {
-    try { // use find expression to search state data
-        let ans: string = statesBordersData.find((state) => isPointInPoly(pt, state.border)).state;
-        return ans;
-    }
-    finally { // point isnt in any state
-        return "no state found";
-    }
+    //try { // use find expression to search state data
+        let ans = statesBordersData.find((state) => isPointInPoly(pt, state.border));
+        if(ans == undefined) {
+            return 'no state found';
+        }
+        else {
+            return ans.state;
+        }
+    //}
+    //finally { // point isnt in any state
+        //return "no state found";
+    //}
 }
