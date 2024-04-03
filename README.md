@@ -42,7 +42,9 @@ know. A Makefile never hurt anyone.
 We would prefer that your solution not require a specific IDE to run, and that
 it can be built and run on the command line.
 
-# Tech Notes
+# Solution
+
+## Tech Notes
 
 - We will use Bun and TypeScript
 - Jest for testing
