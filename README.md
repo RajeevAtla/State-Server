@@ -72,7 +72,8 @@ it can be built and run on the command line.
 ### Dependencies
 - The main dependency is [Bun](https://bun.sh).
 ```bash
-npm install -g bun
+npm install -g bun # mac/linux
+powershell -c "irm bun.sh/install.ps1|iex" # windows
 ```
 
 ### Server
