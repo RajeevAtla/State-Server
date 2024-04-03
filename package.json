@@ -12,6 +12,7 @@
     "test": "bun test"
   },
   "dependencies": {
+    "@biomejs/biome": "1.6.3",
     "supertest": "^6.3.4"
   }
 }

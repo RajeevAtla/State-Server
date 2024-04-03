@@ -50,6 +50,7 @@ it can be built and run on the command line.
 - Bun's testing module for testing, with Supertest for server testing
 
 ## Implementation Notes
+
 - `states.json` isn't really a valid JSON file, so I fixed it up
   - Every entry is wrapped up in a states object
   - All the entries are put in an array
@@ -60,7 +61,7 @@ it can be built and run on the command line.
   - In production, would use something like https://github.com/Turfjs/turf
   - No point can be in 2 states at once
 - Server
-  - Use the http module
+  - Use the Node http module
   - Instead of a GET request (which isn't supposed to include data), we use a POST request
 - Tests
   - Use the Bun testing module for more speed

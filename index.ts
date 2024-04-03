@@ -1,17 +1,23 @@
-import { which } from 'bun';
-import data from './states.json';
-import {isPointInPoly, whichState, getData, type StateBorders} from './util.ts'
+import { which } from "bun";
+import data from "./states.json";
+import {
+	type StateBorders,
+	getData,
+	isPointInPoly,
+	whichState,
+} from "./util.ts";
 
+const jsonData = data.states;
+const StateBordersData: Array<StateBorders> = [];
 
-let jsonData = data.states;
-let StateBordersData: Array<StateBorders> = [];
+jsonData.forEach((element) =>
+	StateBordersData.push({ state: element.state, border: element.border }),
+);
 
-jsonData.forEach((element) => StateBordersData.push({state: element.state, border: element.border}));
+const testLong = -77.036133;
+const testLat = 40.51379;
 
-let testLong: number = -77.036133;
-let testLat: number = 40.51379;
-
-let testPt: Array<number> = [testLong, testLat];
+const testPt: Array<number> = [testLong, testLat];
 
 //let penn: StateBorders = StateBordersData.find((state) => state.state == "Pennsylvania");
 
