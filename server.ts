@@ -41,8 +41,7 @@ export const server = createServer((req, res) => {
 });
 
 const PORT = 3000;
-if (require.main === module) {
-    // This block runs if the file is started directly
+if(import.meta.file == 'server.ts') { // only start server if server.ts is run
     server.listen(PORT, () => {
         console.log(`Server running at http://localhost:${PORT}/`);
     });

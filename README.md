@@ -62,4 +62,6 @@ it can be built and run on the command line.
 - Server
   - Use the http module
   - Instead of a GET request (which isn't supposed to include data), we use a POST request
-  - 
+- Tests
+  - Use the Bun testing module for more speed
+  - 100% test coverage
