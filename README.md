@@ -47,7 +47,7 @@ it can be built and run on the command line.
 ## Tech Notes
 
 - We will use Bun and TypeScript
-- Jest for testing
+- Bun's testing module for testing
 
 ## Implementation Notes
 - `states.json` isn't really a valid JSON file, so I fixed it up
